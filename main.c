@@ -9,13 +9,14 @@
  *      pelo governo às pessoas cadastradas. Desenvolva parte do
  *      controle desta farmácia, fazendo o Controle de Medicamentos,
  *      cujos dados são:
- *          - Medicamentos;
- *          - Princípio ativo;
- *          - Laboratório;
- *          - Quantidade em estoque;
- *          - Unidade (caixa, ml, comprimido, ...);
- *          - Data de validade;
- *          - Preço custo (R$);
+ *          - Medicamentos;                         -> char[128]
+ *          - Princípio ativo;                      -> char[128]
+ *          - Laboratório;                          -> char[128]
+ *          - Quantidade em estoque;                -> int
+ *          - Unidade (caixa, ml, comprimido, ...); -> char[32]
+ *          - Data de validade;                     -> struct DataType
+ *          - Preço custo (R$);                     -> float
+ *
  * Desenvolva um algoritmo com a estrutura de dados para
  * armazenar os dados de N medicamentos. Posteriormente,
  * execute cada uma das ações a seguir (apresente um Menu
@@ -33,6 +34,16 @@
 #include <string.h>
 // #include <windows.h>
 
+// --- VARIÁVEIS "GLOBAIS" ---
+#define TAM128 128
+#define TAM32 32
+
+typedef struct {
+  int day;
+  int month;
+  int year;
+} DataType;
+
 // --- DEFINIÇÃO DE FUNÇÕES ---
 
 void show_menu();
@@ -40,6 +51,7 @@ void show_menu();
 // --- CÓDIGO PRINCIPAL ---
 
 int main() {
+
   printf("Hello, World!");
   return 0;
 }
