@@ -1,4 +1,12 @@
 /*
+ *  ==============================================
+ *  Autores: Antônio Gonçalves dos Santos;
+ *           Bernardo Quaiatto Signor;
+ *
+ *          UFN - Ciência da Computação
+ *          Algoritmos e Programação B
+ *  ==============================================
+ *
  * No nosso dia-a-dia, durante a resolução de problemas e sua
  * implementação, nos deparamos com diferentes tipos de dados
  * e manipulações desses dados, que precisam ser elaboradas.
