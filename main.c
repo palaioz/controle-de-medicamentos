@@ -34,24 +34,60 @@
 #include <string.h>
 // #include <windows.h>
 
-// --- VARIÁVEIS "GLOBAIS" ---
 #define TAM128 128
 #define TAM32 32
+#define MAX_MED 100
+
+// --- ESTRUTURAS DE DADOS ---
 
 typedef struct {
-  int day;
-  int month;
-  int year;
+    int day;
+    int month;
+    int year;
 } DataType;
 
-// --- DEFINIÇÃO DE FUNÇÕES ---
+typedef struct {
+    char nome[TAM128];
+    char principio_ativo[TAM128];
+    char laboratorio[TAM128];
+    int quantidade;
+    char unidade[TAM32];
+    DataType validade;
+    float preco_custo;
+} Medicamento;
 
-void show_menu();
+// --- FUNÇÕES ---
+
+void show_menu() {
+    printf("\n===============================\n");
+    printf("\tCONTROLE DE MEDICAMENTOS")
+    printf("\n===============================\n");
+}
+
+void clean_buffer() {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
+void remove_line_break(char *str) {
+    size_t len = strlen(str);
+    if (len > 0 && str[len - 1] == '\n') {
+        str[len - 1] = '\0';
+    }
+}
+
+void create_medic(Medicamento *estoque, int *total);
+void list_medics(Meciamento *estoque, int total);
+void list_via_lab(Medicamtno *estoque, int total);
+void list_least_quantity(Medicamento *estoque, int total);
+void total_value(Medicamento *estoque, int total);
 
 // --- CÓDIGO PRINCIPAL ---
 
 int main() {
+    setlocale(LC_ALL, "Portuguese");
+''
 
-  printf("Hello, World!");
-  return 0;
+    printf("Hello, World!\n");
+    return 0;
 }
